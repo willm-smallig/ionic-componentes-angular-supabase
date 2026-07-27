@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>mostrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card-header>
+    <ion-card-title> {{registros.nombre}} </ion-card-title>
+  </ion-card-header>
+
+  <ion-card
+    *ngFor="let registro
+of registros"
+  >
+  </ion-card>
+
+  <ion-card-content>
+    <p>Email: {{registros.email}}</p>
+    <p>País: {{registros.pais}}</p>
+    <p>Género: {{registros.genero}}</p>
+    <p>Fecha: {{registros.dob}}</p>
+  </ion-card-content>
+</ion-content>
