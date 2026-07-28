@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Editar registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input [(ngModel)]="producto.nombre" name="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input
+      type="email"
+      [(ngModel)]="producto.email"
+      name="email"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Edad</ion-label>
+    <ion-input
+      type="number"
+      [(ngModel)]="producto.edad"
+      name="edad"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Fecha de nacimiento</ion-label>
+    <ion-input type="date" [(ngModel)]="producto.dob" name="dob"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Género</ion-label>
+    <ion-input [(ngModel)]="producto.genero" name="genero"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">País</ion-label>
+    <ion-input [(ngModel)]="producto.pais" name="pais"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Newsletter</ion-label>
+    <ion-input
+      [(ngModel)]="producto.recibe_newsletter"
+      name="recibe_newsletter"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Tecnologías</ion-label>
+    <ion-input
+      [(ngModel)]="producto.tecnologias"
+      name="tecnologias"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Observaciones</ion-label>
+    <ion-textarea
+      [(ngModel)]="producto.observaciones"
+      name="observaciones"
+    ></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" color="success" (click)="guardar()">
+    Guardar
+  </ion-button>
+  <ion-button expand="block" color="medium" (click)="cancelar()">
+    Volver
+  </ion-button>
+</ion-content>

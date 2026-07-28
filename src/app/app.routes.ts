@@ -7,7 +7,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'mostrar',
     pathMatch: 'full',
   },
   {
@@ -17,5 +17,9 @@ export const routes: Routes = [
   {
     path: 'mostrar',
     loadComponent: () => import('./pages/mostrar/mostrar.page').then( m => m.MostrarPage)
+  },
+  {
+    path: 'edit-product-modal',
+    loadComponent: () => import('./pages/edit-product-modal/edit-product-modal.page').then( m => m.EditProductModalPage)
   },
 ];

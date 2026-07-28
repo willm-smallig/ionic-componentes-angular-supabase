@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <ion-card *ngFor="let registro of registros">
     <ion-card-header>
       <ion-card-title>{{ registro.nombre }}</ion-card-title>
@@ -19,7 +18,14 @@
       <p>Newsletter: {{ registro.recibe_newsletter }}</p>
       <p>Tecnologías: {{ registro.tecnologias }}</p>
       <p>Observaciones: {{ registro.observaciones }}</p>
+
+      <ion-button
+        expand="block"
+        color="warning"
+        (click)="editarProducto(registro)"
+      >
+        Editar
+      </ion-button>
     </ion-card-content>
   </ion-card>
-
 </ion-content>
