@@ -80,6 +80,18 @@ export class EditProductModalPage implements OnInit {
     this.modalCtrl.dismiss(true);
   }
 
+  async eliminar() {
+    const { error } = await this.supabaseService.supabase
+      .from('formulario_demo')
+      .delete()
+      .eq('id', this.producto.id);
+    if (error) {
+      console.error(error);
+      return;
+    }
+    this.modalCtrl.dismiss(true);
+  }
+
   cancelar() {
     this.modalCtrl.dismiss();
   }
