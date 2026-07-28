@@ -5,20 +5,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card-header>
-    <ion-card-title> {{registros.nombre}} </ion-card-title>
-  </ion-card-header>
 
-  <ion-card
-    *ngFor="let registro
-of registros"
-  >
+  <ion-card *ngFor="let registro of registros">
+    <ion-card-header>
+      <ion-card-title>{{ registro.nombre }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Email: {{ registro.email }}</p>
+      <p>Edad: {{ registro.edad }}</p>
+      <p>Fecha de nacimiento: {{ registro.dob }}</p>
+      <p>Género: {{ registro.genero }}</p>
+      <p>País: {{ registro.pais }}</p>
+      <p>Newsletter: {{ registro.recibe_newsletter }}</p>
+      <p>Tecnologías: {{ registro.tecnologias }}</p>
+      <p>Observaciones: {{ registro.observaciones }}</p>
+    </ion-card-content>
   </ion-card>
 
-  <ion-card-content>
-    <p>Email: {{registros.email}}</p>
-    <p>País: {{registros.pais}}</p>
-    <p>Género: {{registros.genero}}</p>
-    <p>Fecha: {{registros.dob}}</p>
-  </ion-card-content>
 </ion-content>

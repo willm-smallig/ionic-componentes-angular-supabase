@@ -25,7 +25,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, Io
 export class MostrarPage implements OnInit {
   constructor(private supabaseService: SupabaseService) {}
 
-  registros: any['nombre'] = [];
+  registros: any[] = [];
 
   ionViewWillEnter() {
     this.cargarDatos();
@@ -33,7 +33,7 @@ export class MostrarPage implements OnInit {
 
   async cargarDatos() {
     const { data, error } = await this.supabaseService.supabase
-      .from('registros_demo')
+      .from('formulario_demo')
       .select('*');
     if (!error) {
       this.registros = data;
